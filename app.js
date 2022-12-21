@@ -60,7 +60,7 @@ function makeOpaque(index) {
 }
 
 function fadeCopiedText(index) {
-    let copyText = color_answer_container[index].textContent;
+    let copyText = color_answer_container[index].childNodes[3].textContent;
     navigator.clipboard.writeText(copyText);
     let copiedText = document.querySelector("#copied")
     copiedText.textContent = "Copied!"
