@@ -4,6 +4,7 @@ const hoverSound = new Audio("hover.mp3");
 const clickedSound = new Audio("clicked.mp3");
 const copiedSound = new Audio("copied.mp3");
 
+
 function waitForAudio(audio) {
 
     const newAudio = audio.currentTime > 0 && !audio.paused && !audio.ended
@@ -13,35 +14,51 @@ function waitForAudio(audio) {
     }
 }
 
-let hoverFunc = (element) => {
+let boxSounds = (element) => {
     let hoverCount = 0;
 
+    //plays this sound when box is clicked
     if (element.matches(":active")) {
         clickedSound.currentTime = 0;
         clickedSound.pause();
+        hoverSound.pause();
+        hoverSound.currentTime = 0;
+        hoverCount = 0;
         waitForAudio(clickedSound)
     }
-
+    // when box is not clicked start hover sound loop
     let hoverLoop = setInterval(() => {
-
+        //if box is hovered and not being clicked count four beats then reset hover sound
         if (element.matches(":hover") && element.matches(":active") != true) {
-            hoverCount += 1;
             if (hoverCount === 4) {
                 hoverSound.pause();
                 hoverSound.currentTime = 0;
                 hoverCount = 0;
-
             }
-
             waitForAudio(hoverSound)
-        } else {
+            hoverCount += 1;
+        } else { // else if block is not being hovered stop and reset the hover sound and break interval
             hoverSound.pause();
             hoverSound.currentTime = 0;
-
+            hoverCount = 0;
             clearInterval(hoverLoop)
         }
     }, 400)
 }
+
+function makeOpaque(index) {
+    let divOpacityValue = parseFloat(window.getComputedStyle(color_answer_container[index]).getPropertyValue("opacity"));
+    let toOpaque = setInterval(() => {
+
+        if (divOpacityValue > 0) {
+            divOpacityValue -= .05;
+            color_answer_container[index].style.opacity = divOpacityValue;
+        } else {
+            clearInterval(toOpaque)
+        }
+    }, 10);
+}
+
 function fadeCopiedText(index) {
     let copyText = color_answer_container[index].textContent;
     navigator.clipboard.writeText(copyText);
@@ -58,18 +75,16 @@ function fadeCopiedText(index) {
     }, 30)
 }
 
-[...color_box_container].forEach((element, index, array) => {
 
+
+let boxEvents = [...color_box_container].forEach((element, index) => {
     element.addEventListener("mouseover", () => {
-        hoverFunc(element);
+        boxSounds(element);
     })
-
-    // #========================================================================
-
+    // #===========================================================================================================================
     element.addEventListener("mousedown", () => {
-        hoverFunc(element);
+        boxSounds(element);
         let divOpacityValue = parseFloat(window.getComputedStyle(color_answer_container[index]).getPropertyValue("opacity"));
-
         let noOpaque = setInterval(() => {
 
             if (divOpacityValue < 1) {
@@ -80,51 +95,19 @@ function fadeCopiedText(index) {
             }
         }, 10);
     })
-
-    // #========================================================================
-
+    // #===========================================================================================================================
     element.addEventListener("mouseup", () => {
-        hoverFunc(element);
-        let divOpacityValue = parseFloat(window.getComputedStyle(color_answer_container[index]).getPropertyValue("opacity"));
-
-        let toOpaque = setInterval(() => {
-
-            if (divOpacityValue > 0) {
-                divOpacityValue -= .05;
-                color_answer_container[index].style.opacity = divOpacityValue;
-            } else {
-                clearInterval(toOpaque)
-            }
-
-        }, 10);
+        boxSounds(element);
+        makeOpaque(index);
     })
-
-    // #========================================================================
-
+    // #===========================================================================================================================
     element.addEventListener("mouseout", () => {
+        makeOpaque(index);
 
-        hoverFunc(element);
-
-        let divOpacityValue = parseFloat(window.getComputedStyle(color_answer_container[index]).getPropertyValue("opacity"));
-
-        let toOpaque = setInterval(() => {
-
-            if (divOpacityValue > 0) {
-                divOpacityValue -= .05;
-                color_answer_container[index].style.opacity = divOpacityValue;
-            } else {
-                clearInterval(toOpaque)
-            }
-        }, 10);
     })
-    // #========================================================================
-
+    // #===========================================================================================================================
     element.addEventListener("dblclick", () => {
-        hoverSound.pause()
-        hoverSound.currentTime = 0;
-
         fadeCopiedText(index);
-
     })
 
 
