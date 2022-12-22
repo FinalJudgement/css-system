@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web | System</title>
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap"
@@ -14,107 +14,91 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="#link-to-colors">Colors</a></li>
-            <li><a href="#link-to-fonts">Fonts</a></li>
-            <li><a href="#link-to-styles">Styles</a></li>
-        </ul>
-    </nav>
+    <header>
+        <span id="logo">System</span>
+        <nav>
+
+            <ul>
+
+                <li><a href="#jump-to-colors">Colors</a></li>
+                <li><a href="#jump-to-fonts">Fonts</a></li>
+                <li><a href="#jump-to-styles">Styles</a></li>
+            </ul>
+        </nav>
+        <h1></h1>
+    </header>
+
     <main>
-        <h1 id="main-heading">Web Developer System</h1>
-        <section>
-            <div class="section-container">
-                <article id="link-to-colors" class="color-selection">
-                    <h2 id="special-rgb">Colors</h2>
-                    <div class="color-box-container">
-                        <div class="color-box1"></div>
-                        <div class="color-box2"></div>
-                        <div class="color-box3"></div>
-                        <div class="color-box4"></div>
-                    </div>
-                    <div class="color-answer-container">
-                        <div class="color-answer1">
-                            <h2>Kreme</h2>
-                            <h2>rgba(243, 243, 244, 1)</h2>
-                        </div>
-                        <div class="color-answer2">
-                            <h2>Beijing</h2>
-                            <h2>rgba(217, 197, 178, 1)</h2>
-                        </div>
-                        <div class="color-answer3">
-                            <h2>Granite</h2>
-                            <h2>rgba(126, 127, 131, 1)</h2>
-                        </div>
-                        <div class="color-answer4">
-                            <h2>Skate Deck Black</h2>
-                            <h2>rgba(52, 49, 45, 1)</h2>
-                        </div>
-                        <div class="color-answer-description">
-                            <p>Hold to preview</p>
-                            <p>Double click to copy</p>
-                            <p id="copied"></p>
-                        </div>
-                    </div>
-                </article>
-                <article id="link-to-fonts" class="font-selection">
-                    <h2><em>Fonts</em></h2>
-                    <div class="font-choice1">
-                        <h3>Roboto</h3>
-                        <p>The quick brown fox jumps over the lazy dog.</p>
-                        <p><strong>The quick brown fox jumps over the lazy dog.</strong></p>
-                        <p><em>The quick brown fox jumps over the lazy dog.</em></p>
-                    </div>
-                    <div class="font-choice2">
-                        <h3>Open Sans</h3>
-                        <p>The quick brown fox jumps over the lazy dog.</p>
-                        <p><strong>The quick brown fox jumps over the lazy dog.</strong></p>
-                        <p><em>The quick brown fox jumps over the lazy dog.</em></p>
-                    </div>
-                    <div class="font-choice3">
-                        <h3>Montserrat</h3>
-                        <p>The quick brown fox jumps over the lazy dog.</p>
-                        <p><strong>The quick brown fox jumps over the lazy dog.</strong></p>
-                        <p><em>The quick brown fox jumps over the lazy dog.</em></p>
-                    </div>
-                </article>
+        <h1 id="banner"> My CSS System</h1>
+        <section id="jump-to-colors" class="colors-section">
+            <h2>Colors</h2>
+
+            <div class="color-answer-container">
+                <div class="color-answer1">
+                    <h3>Dirty Gold</h3>
+                    <h3>#B8B323</h3>
+                </div>
+                <div class="color-answer2">
+                    <h3>Mellow Yellow</h3>
+                    <h3>#FFFA73</h3>
+                </div>
+                <div class="color-answer3">
+                    <h3>Sky</h3>
+                    <h3>#8CD9FF</h3>
+                </div>
+                <div class="color-answer4">
+                    <h3>Club Red</h3>
+                    <h3>#FF596A</h3>
+                </div>
+                <div class="color-answer5">
+                    <h3>Carpet Red</h3>
+                    <h3>#B34752</h3>
+                </div>
+                <div class="color-answer6">
+                    <h3>Floss white</h3>
+                    <h3>#ebebeb</h3>
+                </div>
+                <div class="color-answer7">
+                    <h3>Greymane</h3>
+                    <h3>#b3b3b3</h3>
+                </div>
+                <div class="color-answer8">
+                    <h3>Grey's Anatomy</h3>
+                    <h3>#666666</h3>
+                </div>
+                <div class="color-answer9">
+                    <h3>Skate Deck Black</h3>
+                    <h3>#313131</h3>
+                </div>
+                <div class="color-answer-description">
+                    <p>hover to preview</p>
+                    <p>click to copy</p>
+                    <span id="copied"></span>
+                </div>
             </div>
+
+            <div class="color-box-container">
+                <div class="color-box box1"></div>
+                <div class="color-box box2"></div>
+                <div class="color-box box3"></div>
+                <div class="color-box box4"></div>
+                <div class="color-box box5"></div>
+                <div class="color-box box6"></div>
+                <div class="color-box box7"></div>
+                <div class="color-box box8"></div>
+                <div class="color-box box9"></div>
+            </div>
+
         </section>
-        <section>
-            <div class="section-container">
-                <article id="link-to-styles" class="text-style-selection">
-                    <h2>Text Styles</h2>
-                    <div class="heading-choice1">
-                        <h1>H1: Main page heading</h1>
-                        <ul>
-                            <li>Font-weight: 700(bold);</li>
-                            <li>Font-size: 26px;</li>
-                            <li>font-family: Roboto;</li>
-                        </ul>
-                    </div>
-                    <div class="heading-choice2">
-                        <h2>H2: Subheading</h2>
-                        <ul>
-                            <li>Font-weight: 500;</li>
-                            <li>Font-size: 18px;</li>
-                            <li>font-family: Open Sans;</li>
-                        </ul>
-                    </div>
-                    <div class="heading-choice3">
-                        <p>P: Paragraph text</p>
-                        <ul>
-                            <li>Font-weight: 400;</li>
-                            <li>Font-size: 14px;</li>
-                            <li>font-family: Montserrat;</li>
-                        </ul>
-                    </div>
-                </article>
-            </div>
+        <section id="jump-to-fonts" class="fonts-section">
+            <h2>Fonts</h2>
+        </section>
+        <section id="jump-to-styles" class="styles-section">
+            <h2>Styles</h2>
         </section>
     </main>
 
     <script src="app.js"></script>
-
 </body>
 
 </html>
