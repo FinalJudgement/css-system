@@ -21,6 +21,9 @@ body {
 header {
     background-color: #363424;
     padding: 5px 50px 0 50px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 header nav {
@@ -37,15 +40,22 @@ header ul {
 
 header li {
     display: inline;
-
     list-style: none;
     text-align: center;
     padding: 5px 30px;
 }
 
+
+
 header a {
     text-decoration: none;
     color: #C4C2AD;
+    border-bottom: 2px solid transparent;
+}
+
+header a:hover {
+    color: white;
+    border-bottom: 2px solid white;
 }
 
 a.burger {
@@ -331,7 +341,7 @@ main section {
 }
 
 .styles-section {
-    height: 650px;
+    height: 680px;
 }
 
 .heading-choices {
@@ -374,6 +384,13 @@ main section {
     font-size: 14px;
     font-family: Montserrat;
 }
+
+footer {
+    background-color: #363424;
+    color: white;
+    padding: 50px;
+}
+
 
 @media screen and (max-width: 1470px) {
 
