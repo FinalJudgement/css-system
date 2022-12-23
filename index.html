@@ -9,23 +9,25 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header>
         <span id="logo">System</span>
         <nav>
-
-            <ul>
-
+            <a id="hamburger" class="burger" href="javascript:void(0)" onclick="burgerFunction()"> <i
+                    class="fa fa-bars"></i></a>
+            <ul class="my-links">
                 <li><a href="#jump-to-colors">Colors</a></li>
                 <li><a href="#jump-to-fonts">Fonts</a></li>
                 <li><a href="#jump-to-styles">Styles</a></li>
             </ul>
+
         </nav>
-        <h1></h1>
     </header>
 
     <main>
@@ -44,7 +46,7 @@
                 </div>
                 <div class="color-answer3">
                     <h3>Sky</h3>
-                    <h3>#8CD9FF</h3>
+                    <h3>#BEE9F7</h3>
                 </div>
                 <div class="color-answer4">
                     <h3>Club Red</h3>
@@ -92,9 +94,58 @@
         </section>
         <section id="jump-to-fonts" class="fonts-section">
             <h2>Fonts</h2>
+            <div class="font-choice1">
+                <h3>Roboto</h3>
+                <p>The quick brown fox jumps over the lazy dog.</p>
+                <p><strong>The quick brown fox jumps over the lazy dog.</strong></p>
+                <p><em>The quick brown fox jumps over the lazy dog.</em></p>
+            </div>
+            <div class="font-choice2">
+                <h3>Open Sans</h3>
+                <p>The quick brown fox jumps over the lazy dog.</p>
+                <p><strong>The quick brown fox jumps over the lazy dog.</strong></p>
+                <p><em>The quick brown fox jumps over the lazy dog.</em></p>
+            </div>
+            <div class="font-choice3">
+                <h3>Montserrat</h3>
+                <p>The quick brown fox jumps over the lazy dog.</p>
+                <p><strong>The quick brown fox jumps over the lazy dog.</strong></p>
+                <p><em>The quick brown fox jumps over the lazy dog.</em></p>
+            </div>
+
         </section>
         <section id="jump-to-styles" class="styles-section">
             <h2>Styles</h2>
+            <div class="heading-choices heading-choice1">
+                <h1>H1: Main page heading</h1>
+                <ul>
+                    <li>h1 {</li>
+                    <li>Font-weight: 700;</li>
+                    <li>Font-size: 26px;</li>
+                    <li>font-family: Roboto;</li>
+                    <li>}</li>
+                </ul>
+            </div>
+            <div class="heading-choices heading-choice2">
+                <h2>H2: Subheading</h2>
+                <ul>
+                    <li>h2 {</li>
+                    <li>Font-weight: 500;</li>
+                    <li>Font-size: 18px;</li>
+                    <li>font-family: "Open Sans";</li>
+                    <li>}</li>
+                </ul>
+            </div>
+            <div class="heading-choices heading-choice3">
+                <p>P: Paragraph text</p>
+                <ul>
+                    <li>p {</li>
+                    <li>Font-weight: 400;</li>
+                    <li>Font-size: 14px;</li>
+                    <li>font-family: Montserrat;</li>
+                    <li>}</li>
+                </ul>
+            </div>
         </section>
     </main>
 

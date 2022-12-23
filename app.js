@@ -1,3 +1,15 @@
+function burgerFunction() {
+
+    let links = document.querySelector(".my-links")
+    if (links.style.display === "block") {
+        console.log("to none")
+        links.style.display = "none";
+    } else {
+        console.log("to block")
+        links.style.display = "block"
+    }
+}
+
 const colorContainer = document.querySelectorAll(".color-box-container > div");
 const answerContainer = document.querySelectorAll(".color-answer-container > div");
 const colorSection = document.querySelector(".colors-section");
